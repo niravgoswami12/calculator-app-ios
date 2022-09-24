@@ -22,7 +22,7 @@
                                     <stackView opaque="NO" alpha="0.84999999999999998" contentMode="scaleToFill" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="Hif-xj-qwC" userLabel="Button Row 1">
                                         <rect key="frame" x="0.0" y="0.0" width="350" height="80.333333333333329"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gXW-Aq-24m">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gXW-Aq-24m">
                                                 <rect key="frame" x="0.0" y="0.0" width="78.666666666666671" height="80.333333333333329"/>
                                                 <color key="tintColor" systemColor="systemRedColor"/>
                                                 <state key="normal" title="Button"/>
@@ -93,7 +93,7 @@
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" cornerStyle="capsule">
                                                     <backgroundConfiguration key="background" strokeWidth="72" strokeOutset="72">
-                                                        <color key="backgroundColor" red="0.18039215689999999" green="0.1843137255" blue="0.21960784310000001" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="backgroundColor" red="0.090196078430000007" green="0.090196078430000007" blue="0.10980392160000001" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                                                     </backgroundConfiguration>
                                                     <attributedString key="attributedTitle">
                                                         <fragment content="7">
@@ -111,7 +111,7 @@
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" cornerStyle="capsule">
                                                     <backgroundConfiguration key="background">
-                                                        <color key="backgroundColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="backgroundColor" red="0.090196078430000007" green="0.090196078430000007" blue="0.10980392160000001" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                                                     </backgroundConfiguration>
                                                     <attributedString key="attributedTitle">
                                                         <fragment content="8">
@@ -129,7 +129,7 @@
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" cornerStyle="capsule">
                                                     <backgroundConfiguration key="background">
-                                                        <color key="backgroundColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="backgroundColor" red="0.090196078430000007" green="0.090196078430000007" blue="0.10980392160000001" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                                                     </backgroundConfiguration>
                                                     <attributedString key="attributedTitle">
                                                         <fragment content="9">
