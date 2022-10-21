@@ -20,9 +20,22 @@ class ViewController: UIViewController {
     var operators = ["/", "x", "+", "-"] // DMAS
     //Result Label
     @IBOutlet weak var PrimaryResultLabel: UILabel!
+    @IBOutlet weak var orientationStackView: UIStackView!
     
     override func viewDidLoad(){
         super.viewDidLoad()
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(rotated), name: UIDevice.orientationDidChangeNotification, object: nil)
+    }
+    
+    @objc func rotated() {
+        if UIDevice.current.orientation.isLandscape {
+            orientationStackView.isHidden = false
+        }
+
+        if UIDevice.current.orientation.isPortrait {
+            orientationStackView.isHidden = true
+        }
     }
     
     /// Clear result label
@@ -98,6 +111,7 @@ class ViewController: UIViewController {
         if(operators.contains(String(exp.suffix(1)))){
             exp.removeLast()
         }
+        
         exp = exp.replacingOccurrences(of: "/", with: " / ")
             .replacingOccurrences(of: "x", with: " x ")
             .replacingOccurrences(of: "+", with: " + ")
@@ -115,10 +129,10 @@ class ViewController: UIViewController {
                 firstPreOpIdx = token.firstIndex(of: "x") ?? nil
             }
             if(firstPreOpIdx == nil){
-                firstPreOpIdx = token.firstIndex(of: "+") ?? nil
+                firstPreOpIdx = token.firstIndex(of: "-") ?? nil
             }
             if(firstPreOpIdx == nil){
-                firstPreOpIdx = token.firstIndex(of: "-") ?? nil
+                firstPreOpIdx = token.firstIndex(of: "+") ?? nil
             }
             
             if(firstPreOpIdx != nil){
@@ -180,7 +194,7 @@ class ViewController: UIViewController {
         
         let button = sender as UIButton
         let currentInput = button.tag
-        var exp: String = PrimaryResultLabel.text!
+        let exp: String = PrimaryResultLabel.text!
         if (exp.count == 19 && currentInput != 17){// Max Length for input  and  currentInput is not Equal
             return;
         }
@@ -224,7 +238,7 @@ class ViewController: UIViewController {
                 PrimaryResultLabel.text?.append("0")
             }
         case ".":
-            if(resultLabelText!.last != "."){
+            if(resultLabelText!.last != ".") && resultLabelText!.contains(".") == false {
                 PrimaryResultLabel.text?.append(".")
             }
         default:
